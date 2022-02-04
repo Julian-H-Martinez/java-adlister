@@ -11,6 +11,10 @@
     <title>Pick Color</title>
 </head>
 <body>
-
+<form action="" method="post">
+    <label for="color">Enter your favorite color: </label>
+    <input type="text" name="color" id="color"/>
+    <input type="submit" value="Submit"/>
+</form>
 </body>
 </html>
