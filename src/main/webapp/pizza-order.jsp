@@ -4,7 +4,7 @@
     <title>Title</title>
 </head>
 <body>
-<form action="" method="">
+<form action="" method="post">
     <h3>Choose your Crust Type</h3>
     <label for="crustType">Crust Type</label>
     <select name="crustType" id="crustType">
@@ -38,32 +38,32 @@
     <h3>Choose your Toppings</h3>
     <br>
     <h5>Meats</h5>
-    <input type="checkbox" name="pepperoni" id="pepperoni">
+    <input type="checkbox" name="topping" id="pepperoni" value="pepperoni">
     <label for="pepperoni">Pepperoni</label>
 
-    <input type="checkbox" name="italian_sausage" id="italian_sausage">
+    <input type="checkbox" name="topping" id="italian_sausage" value="italian_sausage">
     <label for="italian_sausage">Italian Sausage</label>
 
-    <input type="checkbox" name="chicken" id="chicken">
+    <input type="checkbox" name="topping" id="chicken" value="chicken">
     <label for="chicken">Chicken</label>
 
-    <input type="checkbox" name="bacon" id="bacon">
+    <input type="checkbox" name="topping" id="bacon" value="bacon">
     <label for="bacon">Bacon</label>
     <br>
     <h5>Veggies</h5>
-    <input type="checkbox" name="jalepenos" id="jalepenos">
+    <input type="checkbox" name="topping" id="jalepenos" value="jalepenos">
     <label for="jalepenos">Jalepenos</label>
 
-    <input type="checkbox" name="spinach" id="spinach">
+    <input type="checkbox" name="topping" id="spinach" value="spinach">
     <label for="spinach">Spinach</label>
 
-    <input type="checkbox" name="bell_pepper" id="bell_pepper">
+    <input type="checkbox" name="topping" id="bell_pepper" value="bell_pepper">
     <label for="bell_pepper">Bell Peppers</label>
 
-    <input type="checkbox" name="mushrooms" id="mushrooms">
+    <input type="checkbox" name="topping" id="mushrooms" value="mushrooms">
     <label for="mushrooms">Mushrooms</label>
 
-    <input type="checkbox" name="black_olives" id="black_olives">
+    <input type="checkbox" name="topping" id="black_olives" value="black_olives">
     <label for="black_olives">Black Olives</label>
     <hr>
     <h5>Deliver To:</h5>
@@ -73,6 +73,8 @@
     <input type="text" name="city" id="city">
     <label for="zip">Zip:</label>
     <input type="text" name="zip" id="zip">
+
+    <input type="submit" value="Submit">
 </form>
 </body>
 </html>
