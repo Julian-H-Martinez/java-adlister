@@ -1,30 +1,29 @@
-
-<%--Inside of login.jsp write some code to check the submmitted values.
-If the username submitted is "admin", and the password is "password", redirect the user to the profile page;
-otherwise, redirect back to the login form.--%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title><%= "some title" %>
-    </title>
+    <title><%= "some title" %></title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
           integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 </head>
 <body>
+<%
+    if(request.getMethod().equalsIgnoreCase("post")){
+        String user = request.getParameter("username");
+        String pass = request.getParameter("password");
+        if(user.equals("admin") && pass.equals("password")){
+            response.sendRedirect("/profile.jsp");
+        }
+    }
+%>
 <div class="container">
     <form method="post" action="login.jsp">
         <div class="form-group">
             <label for="username">Username</label>
-            <input type="text" class="form-control" id="username">
+            <input type="text" class="form-control" id="username" name="username">
         </div>
         <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" class="form-control" id="password">
-        </div>
-        <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            <input type="password" class="form-control" id="password" name="password">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
