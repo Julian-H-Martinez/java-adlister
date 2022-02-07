@@ -1,5 +1,6 @@
 import java.util.List;
-
+//  interface is informing us structure of DAO
+//  this example is static (hardcoded)
 //  worry about one structure at a time
 public interface Albums {
     //  build out abstract methods that will be implented by DAO

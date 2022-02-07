@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+//  implementation of interface
 
 public class StaticAlbumsDao implements Albums{
     //  storing in DAO
