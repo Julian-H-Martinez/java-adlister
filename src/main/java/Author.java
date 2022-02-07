@@ -1,6 +1,7 @@
 import java.io.Serializable;
 
 public class Author implements Serializable {
+    private Long id;
     private String firstName;
     private String lastName;
 
@@ -9,7 +10,8 @@ public class Author implements Serializable {
     public Author() {
     }
 
-    public Author(String firstName, String lastName){
+    public Author(Long id, String firstName, String lastName){
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
     }
@@ -26,6 +28,8 @@ public class Author implements Serializable {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+    public Long getId(){return id;}
+    public void getId(Long id){this.id = id;}
 
     @Override
     public String toString() {

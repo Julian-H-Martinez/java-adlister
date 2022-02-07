@@ -1,12 +1,14 @@
 import java.io.Serializable;
 
 public class Quote implements Serializable {
+    private Long id;
     private Author author;
     private String content;
 
     //  CONSTRUCTORS
     public Quote(){}
-    public Quote(Author author, String content){
+    public Quote(Long id, Author author, String content){
+        this.id = id;
         this.author = author;
         this.content = content;
     }
@@ -23,6 +25,12 @@ public class Quote implements Serializable {
     }
     public void setContent(String content) {
         this.content = content;
+    }
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
     }
 
     @Override
