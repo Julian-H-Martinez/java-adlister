@@ -18,6 +18,6 @@ public class LoginServlet extends HttpServlet {
         if(username.equals("admin") && password.equals("password")){
             res.sendRedirect("/profile");
         }
-//        res.sendRedirect("/login");
+        res.sendRedirect("/login");
     }
 }
