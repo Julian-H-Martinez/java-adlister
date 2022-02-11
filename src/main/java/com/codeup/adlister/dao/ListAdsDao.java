@@ -27,6 +27,12 @@ public class ListAdsDao implements Ads {
         return ad.getId();
     }
 
+    //  only working with mysqlDAO so this is not gonna be needed per-se
+    @Override
+    public List<Ad> searchAdByTitle(String searchTerm) {
+        return null;
+    }
+
     private List<Ad> generateAds() {
         List<Ad> ads = new ArrayList<>();
         ads.add(new Ad(

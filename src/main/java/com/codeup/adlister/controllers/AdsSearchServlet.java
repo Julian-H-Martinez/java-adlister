@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet("/ads/search")
+@WebServlet(name = "controllers.AdsSearchServlet",urlPatterns = "/ads/search")
 public class AdsSearchServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
@@ -23,6 +23,8 @@ public class AdsSearchServlet extends HttpServlet {
             results = DaoFactory.getAdsDao().searchAdByTitle(param);
         }
         req.setAttribute("ads", results);
-        req.getRequestDispatcher("ads/search.jsp").forward(req, res);
+        req.setAttribute("query", param);
+        //  cannot forget WEB-INF
+        req.getRequestDispatcher("/WEB-INF/ads/search.jsp").forward(req, res);
     }
 }
